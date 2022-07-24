@@ -73,3 +73,21 @@ button#plus:hover,#minus:hover,#multiply:hover,#divide:hover, #equal:hover {
     background-color: #FCAF58;
 }
 
+@media only screen 
+    and (device-width: 414px) 
+    and (device-height: 896px) 
+    and (-webkit-device-pixel-ratio: 2) {
+
+        .main-section {
+            display: flex;
+            flex-direction: column;
+            width: 16em;
+            align-items: flex-start;
+            position: relative;
+            left: 30%;
+            top: 15em;
+        }
+
+
+
+     }
