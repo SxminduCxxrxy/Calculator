@@ -1,0 +1,75 @@
+body {
+    background-color: #181414;
+}
+
+span{
+    font-family: 'Champagne Limousines';
+    font-weight: 100;
+    font-size: 2em;
+    color: #ffffff;
+}
+
+.main-section {
+    display: flex;
+    flex-direction: column;
+    width: 16em;
+    align-items: flex-start;
+    position: relative;
+    left: 30%;
+    top: 15em;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 12em;
+    align-items: flex-end;
+}
+
+button[type="button"] {
+    font-family: 'Champagne Limousines';
+    font-weight: 1000;
+    font-size: 1em;
+    background-color: #4CAF50;
+    color: #ffffff;
+    border: none;
+    border-radius: 2em;
+    width: 3em;
+    padding: 1em 1em;
+    cursor: pointer;
+    margin: 0.5em 0 0 0;
+}
+
+button[type="button"]:hover {
+    opacity: 0.6;
+}
+
+button#clear,#history {
+    font-family : 'DELUXES';
+    background-color: #696868;
+    color: #000000;
+}
+
+button#zero,#history {
+    width: 6.2em;
+}
+
+button#zero, #one, #two, #three, #four, #five, #six, #seven, #eight, #nine, #dot {
+    background-color: #272626;
+    color: #ffffff;
+}
+
+button#plus,#minus,#multiply,#divide, #equal {
+    background-color: #ff8800;
+}
+
+button#plus:focus,#minus:focus,#multiply:focus,#divide:focus {
+    background-color: #ffffff;
+    color: #ff8800;
+}
+
+button#plus:hover,#minus:hover,#multiply:hover,#divide:hover, #equal:hover {
+    opacity: 1;
+    background-color: #FCAF58;
+}
+

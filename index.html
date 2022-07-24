@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./calculator.css">
+    <link rel="stylesheet" href="./Fonts/stylesheet.css">
+    <title>Calculator</title>
+  </head>
+
+  <body>
+    
+    <section class="main-section">
+      <div class="container">
+        <span></span>
+      </div>
+      <div class="btn-sections">
+        <button type="button" id = "history">&nbsp;</button>
+        <button type="button" onclick="getResult(event, 'clear')" id = "clear">AC</button>
+        <button type="button" onclick="getResult(event, '/')" id = "divide">&divide;</button>
+      </div>
+      <div class="btn-sections">
+        <button type="button" onclick="getResult(event, 9)" id = "nine">9</button>
+        <button type="button" onclick="getResult(event, 8)" id = "eight">8</button>
+        <button type="button" onclick="getResult(event, 7)" id = "seven">7</button>
+        <button type="button" onclick="getResult(event, '*')" id = "multiply">x</button>
+      </div>
+      <div class="btn-sections">
+        <button type="button" onclick="getResult(event, 6)" id = "six">6</button>
+        <button type="button" onclick="getResult(event, 5)" id = "five">5</button>
+        <button type="button" onclick="getResult(event, 4)" id = "four">4</button>
+        <button type="button" onclick="getResult(event, '-')" id = "minus">-</button>
+      </div>
+      <div class="btn-sections">
+        <button type="button" onclick="getResult(event, 3)" id = "three">3</button>
+        <button type="button" onclick="getResult(event, 2)" id = "two">2</button>
+        <button type="button" onclick="getResult(event, 1)" id = "one">1</button>
+        <button type="button" onclick="getResult(event, '+')" id = "plus">+</button>
+      </div>
+      <div class="btn-sections">
+        <button type="button" onclick="getResult(event, 0)" id = "zero">0</button>
+        <button type="button" onclick="getResult(event, '.')" id = "dot">.</button>
+        <button type="button" onclick="getResult(event, '=')" id = "equal">=</button>  
+      </div>
+      
+    </section>
+
+    <script>
+
+      let stack = [];
+
+      function getResult(event, value) {
+
+        if (value == 'clear') {
+          stack = [];
+          document.querySelector('span').innerHTML = '';
+        } else if (value == '=') {
+          let result = eval(stack.join(''));
+          document.querySelector('span').innerHTML = result;
+          stack = [];
+          stack.push(result);
+        } else {
+          p_dot = prev();
+          console.log(p_dot);
+          stack.push(value);
+          if (value != '+' && value != '-' && value != '*' && value != '/') {
+            if (value == '.') {
+              document.querySelector('span').innerHTML += '.';
+            } 
+            else if ( p_dot ) {
+              document.querySelector('span').innerHTML += value;
+            }
+            else {
+              document.querySelector('span').innerHTML = value;
+            }
+          }
+        }
+      }
+
+      function prev() {
+        if (stack.length == 0 || stack.length == 1) {
+          return false;
+        }
+        
+        if (stack[stack.length - 1] == '.') {
+          return true;
+        }
+      }
+        
+
+    </script>
+
+  </body>
+</html>
