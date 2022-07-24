@@ -78,8 +78,8 @@ button#plus:hover,#minus:hover,#multiply:hover,#divide:hover, #equal:hover {
     and (-webkit-device-pixel-ratio: 2) {
 
         body {
-            width: 100%;
-            height: 100%;
+            width: 414px;
+            height: 896px;
         }
 
         span{
@@ -94,22 +94,22 @@ button#plus:hover,#minus:hover,#multiply:hover,#divide:hover, #equal:hover {
             flex-direction: column;
             width: 22em;
             align-items: flex-start;
-            position: relative;
-            left: 1em;
-            top: 25em;
+            position: fixed;
+            left: 2.5em;
+            top: 20em;
         }
         
         .container {
             display: flex;
             flex-direction: column;
-            width: 19em;
+            width: 20em;
             align-items: flex-end;
+            position: fixed;
+            top: 16em;
         }
         
         button[type="button"] {
-            font-family: 'Champagne Limousines';
-            font-weight: 1000;
-            font-size: 1.6em;
+            font-size: 1.76em;
             border: none;
             border-radius: 6em;
             padding: 1em 1em;
