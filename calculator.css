@@ -121,5 +121,9 @@ button#plus:hover,#minus:hover,#multiply:hover,#divide:hover, #equal:hover {
             width: 6.2em;
         }
 
+        button#plus:focus,#minus:focus,#multiply:focus,#divide:focus {
+            background-color: #ffffff;
+            color: #ff8800;
+        }
 
      }
