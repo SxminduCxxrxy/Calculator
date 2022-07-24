@@ -30,8 +30,6 @@ button[type="button"] {
     font-family: 'Champagne Limousines';
     font-weight: 1000;
     font-size: 1em;
-    background-color: #4CAF50;
-    color: #ffffff;
     border: none;
     border-radius: 2em;
     width: 3em;
@@ -61,6 +59,7 @@ button#zero, #one, #two, #three, #four, #five, #six, #seven, #eight, #nine, #dot
 
 button#plus,#minus,#multiply,#divide, #equal {
     background-color: #ff8800;
+    color: #ffffff
 }
 
 button#plus:focus,#minus:focus,#multiply:focus,#divide:focus {
@@ -78,56 +77,48 @@ button#plus:hover,#minus:hover,#multiply:hover,#divide:hover, #equal:hover {
     and (device-height: 896px) 
     and (-webkit-device-pixel-ratio: 2) {
 
-        .main-section {
-            display: flex;
-            flex-direction: column;
-            width: 16em;
-            align-items: flex-start;
-            position: relative;
-            left: 30%;
-            top: 15em;
+        body {
+            width: 100%;
+            height: 100%;
         }
 
-        body {
-            background-color: #181414;
-        }
-        
         span{
             font-family: 'Champagne Limousines';
             font-weight: 100;
-            font-size: 2em;
+            font-size: 4em;
             color: #ffffff;
         }
         
         .main-section {
             display: flex;
             flex-direction: column;
-            width: 16em;
+            width: 22em;
             align-items: flex-start;
             position: relative;
-            left: 30%;
-            top: 15em;
+            left: 1em;
+            top: 25em;
         }
         
         .container {
             display: flex;
             flex-direction: column;
-            width: 12em;
+            width: 19em;
             align-items: flex-end;
         }
         
         button[type="button"] {
             font-family: 'Champagne Limousines';
             font-weight: 1000;
-            font-size: 1em;
-            background-color: #4CAF50;
-            color: #ffffff;
+            font-size: 1.6em;
             border: none;
-            border-radius: 2em;
-            width: 3em;
+            border-radius: 6em;
             padding: 1em 1em;
             cursor: pointer;
             margin: 0.5em 0 0 0;
+        }
+
+        button#zero,#history {
+            width: 6.2em;
         }
 
 
